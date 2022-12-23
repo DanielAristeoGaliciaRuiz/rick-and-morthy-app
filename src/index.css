@@ -1,0 +1,284 @@
+html{
+    box-sizing:border-box;
+    background: #05292E;
+}
+
+
+*,*::before,*::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.App{
+    color:wheat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-image-container{
+   width: max(95%);
+    background-image: url("https://media.cdn.adultswim.com/uploads/20210428/21428161947-rick-and-morty-logo-png.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+    height: 250px;
+}
+
+
+
+ /*INFORMACION*/
+ .general-info-container{
+   font-size: 25px;
+  background-color: #062226;
+  height: 150px;
+  width: max(70vw);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 20px;
+ }
+ .info-dimenssion-container{
+    display: flex;
+    gap: 50px;
+    font-size: 25px;
+ }
+
+ .personal-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .searcher-form-container{
+   width: max(70vw);
+    padding-top: 10px;
+    margin-bottom: 15px ;
+}
+.searcher-form{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searcher-form-input{
+    height: 60px;
+    width: max(40vw);
+    border: none;
+    border-radius:15px ;
+    font-size: 30px;
+    text-align: center;
+    outline: none;
+ }
+ 
+ .list-container{ 
+   width: max(40vw);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+ }
+
+ .list-item{
+   width: min(35vw);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    height: 38px;
+    background: linear-gradient(45deg, #486448 0%, #1a6b21 100%);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 100ms filter ease-in-out;
+    box-shadow: 1px 1px 20px rgb(33, 73, 43);
+}
+
+.list-item:hover{
+   transform: scale(1.1);
+   filter: brightness(1.2);
+}
+
+
+
+ /*CARDS*/
+ .residents-list{
+    width: max(70vw);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+ }
+
+ 
+ .card-container{
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 450px;
+    background: #062226;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+ }
+
+ .resident-image-container{
+    height: 170px;
+    width: 170px;
+    border-radius: 250px;
+    margin-left: 20px;
+ }
+
+ .info-resident-container{
+    width: 230px;
+ }
+.status-container{
+   display: flex;
+   align-items: center;
+   gap: 3px;
+}
+
+.circle{
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+}
+.circle.Dead{
+   background-color: #B94343;
+}
+.circle.unknown{
+   background-color:#938686;
+
+}
+.circle.Alive{
+   background-color:#4AB648;
+}
+
+.resident-info{
+    display: flex;
+    flex-direction: column;
+  
+ }
+
+.resident-info>span{
+    color:  #3C3E44;
+    padding-top: 10px;
+}
+.info-resident-container>h3{
+   padding-bottom: 10px;
+}
+.list-pages{
+   list-style: none;
+   margin: 2rem 0;
+   padding: 0;
+   display: flex;
+   gap: 25px;
+   justify-content: center;
+}
+.list-pages li{
+   background-color: rgb(31, 105, 37);
+   color: white;
+   width: 35px;
+   aspect-ratio: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.list-pages li:hover{
+   background-color: #0cc21b;
+}
+
+.list-pages li.currentPage{
+   background-color: #0cc21b;
+}
+
+@media(max-width: 700px){
+   .header-image-container{
+      width: max(80%);
+      height: 150px;
+   }
+
+   .general-info-container{
+      padding-top: 15px;
+      width: 75%;
+      height: auto;
+      margin: 0;
+   }
+     .info-dimenssion-container{
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        padding: 0;
+        text-align: center;
+     }
+
+     .general-info-container>h2{
+      padding-bottom: 5px;
+      font-size: 30px;
+      text-align: center;
+   }
+
+    
+   .searcher-form-container{
+      width: 90vw;
+      display: flex;
+      justify-content: center;
+  }
+  .searcher-form-input{
+   position: relative;
+   font-size: 15px;
+   width: 70vw;
+   height: 35px;
+   text-align: center;
+   }
+   .list-container{ 
+      width: max(70vw);
+    }
+    .list-item{
+      width: min(60vw);
+      font-size: 15px;
+   }
+   .card-container{
+      margin-top: 10px;
+      padding-top: 10px;
+      width: 280px;
+      background: #062226;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 15px;
+   }
+  
+   .resident-image-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+   }
+  
+   .info-resident-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+  
+  .resident-info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   
+}
